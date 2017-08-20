@@ -6,6 +6,6 @@
              xmlns:local="clr-namespace:Prototype_MinimalWPFCall"
              mc:Ignorable="d" Height="100" Width="100">
     <Grid>
-        <Label>Hello World!</Label>
+        <Label Name="stringer">Hello World!</Label>
     </Grid>
 </Window>
