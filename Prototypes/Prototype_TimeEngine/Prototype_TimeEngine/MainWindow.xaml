@@ -1,0 +1,42 @@
+﻿<Window
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Prototype_TimeEngine"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="Prototype_TimeEngine.MainWindow"
+             mc:Ignorable="d" Height="300" Width="250">
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="TimeSelectorGrid" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" x:Name="StartTimeLabel" Content="Start Time:"/>
+            <xctk:DateTimePicker Grid.Row="0" Grid.Column="1" x:Name="StartTimePicker"/>
+
+            <Label Grid.Row="1" Grid.Column="0" x:Name="IncrementTimeLabel" Content="Increment Time by:"/>
+            <DatePicker Grid.Row="1" Grid.Column="1" x:Name="IncrementTimePicker" />
+        </Grid>
+
+        <Grid x:Name="ButtonGrid" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" x:Name="SetStartTimeButton" Content="Set Start Time"/>
+            <Button Grid.Row="0" Grid.Column="1" x:Name="AdvanceTimeButton" Content="Advance Time"/>
+        </Grid>
+    </Grid>
+</Window>
