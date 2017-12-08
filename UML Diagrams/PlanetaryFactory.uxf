@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>24</x>
+      <y>304</y>
+      <w>312</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>/abstract class Astronomical Body/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>8</x>
+      <y>592</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Planet</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>136</x>
+      <y>496</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Asteroid</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>48</x>
+      <y>320</y>
+      <w>56</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+inherits</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;340.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>320</y>
+      <w>56</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+inherits</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>376</x>
+      <y>416</y>
+      <w>416</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>AstronmoicalBodyFactory
+-
+public AstronomicalBodyFactory()
+--&gt; loadJson();
+-
+public Planet createPlanet(string, centralBody);
+public Asteroid createAsteroid(string, centralBody);
+public Star createStar(string, centralBody);
+-
+public JString loadJsonPlanets();
+public Jstring loadJsonRandomPlanets();
+public JString loadJsonRichness();
+
+createXXX --&gt; </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>408</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Star</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>320</y>
+      <w>56</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+inherits</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>472</y>
+      <w>312</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;160.0;370.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>208</x>
+      <y>448</y>
+      <w>184</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;80.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>328</x>
+      <y>424</y>
+      <w>64</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>848</x>
+      <y>440</y>
+      <w>256</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>RandomBodies.JSON
+lt=.
+-
+[{
+	"name" : "Class C"
+	"diameterMin" : 1000
+	"diameterMax" : 2000
+	"ressources" : ["siliconHeavy", "poor", "superrich", "traces"]
+}]
+			</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>784</x>
+      <y>328</y>
+      <w>80</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;230.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>848</x>
+      <y>232</y>
+      <w>168</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>AstronomicalBodies.JSON
+lt=.
+-
+[{
+	"name" : "Earth",
+	"diameter" : 2000,
+	"mass" : 1000,
+	"atmosphere" : {
+		"Helium" : 10,
+		"Hydrogen" : 20,
+		"Oxygen" : 50,
+	}
+	"orbit" : {
+		"distance" : 200000,
+		"AngularVelocity" : omeg = sqrt(G (M1 + M2)/r^3)
+		"Angle" : random or number?
+	}
+	"ressources" : "SiliconHeavy"		
+}]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>784</x>
+      <y>480</y>
+      <w>80</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>848</x>
+      <y>592</y>
+      <w>280</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Richness classification.JSON
+lt=.
+-
+As JSON that creates the ranges for a richness class
+[{
+"class" : "siliconHeavy"
+"minSilicon" : 10000
+"maxSilicon" : 40000
+}]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>784</x>
+      <y>544</y>
+      <w>80</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;100.0</additional_attributes>
+  </element>
+</diagram>
